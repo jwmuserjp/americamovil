@@ -1,0 +1,4 @@
+Lungo.ready(function(){
+
+	
+});

@@ -1,0 +1,253 @@
+<section id="inver" data-transition="slide">
+    <header data-title="Relación con Inversionistas">
+        <nav>
+            <a href="#back" data-router="section" data-icon="home"></a>
+        </nav>
+    </header>
+
+    <article id="layout-art1" class="scroll active">
+        <div id="content-text"> 
+            <div class="banner"><img width="360" height="116" border="0" alt="Datos" src="http://www.americamovil.com/amx/img/others/es_price_history.jpg"></div>
+          <div class="directory-box">
+            <h2><span> Resumen Financiero</span></h2>
+          </div>
+          <div class="graphics-box">
+              <div class="cont">
+                  <div class="graphic clearfix">
+                      <div class="main">
+                    
+                            <h2 class="financialHeader1">Resumen Financiero</h2> 
+                        <div> 
+                        <table id="tblFinancialGraphFilter"> 
+                            <tbody>
+                              <tr> 
+                                 <td>Elige una serie</td> 
+                          <td> 
+                            <select onchange="javascript: loadFinancialSummary(this.value,'','es');" id="serie"> 
+                            <option value="amxa" style="color: rgb(0, 0, 0);">AMXA</option> 
+                            <option value="amxl" style="color: rgb(0, 0, 0);">AMXL</option> 
+                            <option value="amx" style="color: rgb(0, 0, 0);">AMX</option> 
+                            <option value="amov" style="color: rgb(0, 0, 0);">AMOV</option>
+                            </select>
+                        </td> 
+                          <td>Moneda</td> 
+                          <td>
+                            <select onchange="javascript: loadFinancialSummary('',this.value,'es');" id="currency" name="currency"> 
+                              <option value="da" id="curOptionDA" style="color: rgb(0, 0, 0);">Dólares</option> 
+                              <option value="pm" id="curOptionPM" style="color: rgb(0, 0, 0);">Pesos Mexicanos</option> 
+                            </select>
+                          </td>
+                                </tr> 
+                            </tbody>
+                        </table> 
+                    </div> 
+                    <div id="financialSummary"><table id="tblFinancialSummary">
+          <tbody><tr>
+            <th colspan="2">Identificación</th>
+            <th colspan="2">Cotizaciones</th>
+          </tr>
+          <tr>
+            <td><label>Ticker</label></td>
+            <td></td>
+            <td><label>Cierre</label></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><label>País</label></td>
+            <td></td>
+            <td><label>Última Operación</label></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><label>Sector</label></td>
+            <td></td>
+            <td><label>Max 1 año</label></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><label>Bolsa</label></td>
+            <td>
+            </td><td> <label>Min 1 año</label></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+            <td><label>Vol$ prom (1 mes)</label></td>
+            <td>  </td>
+          </tr>
+          <tr>
+            <th colspan="2">Variación</th>
+            <th colspan="2">Estadísticas</th>
+          </tr>
+          <tr>
+            <td><label>1 día</label></td>
+            <td>  </td>
+            <td><label>Beta (60m)</label></td>
+            <td>  </td>
+          </tr>
+          <tr>
+            <td><label>1 semana</label></td>
+            <td></td>
+            <td><label>Correlación (60m)</label></td>
+            <td>  </td>
+          </tr>
+          <tr>
+            <td><label>1 mes</label></td>
+            <td></td>
+            <td><label>Volatility (1m)</label></td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td><label>1 año</label></td>
+            <td></td>
+            <td rowspan="2" colspan="2">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><label>12 meses</label></td>
+            <td></td>
+          </tr>
+        </tbody></table>
+
+
+        <table id="tblFinancialSummary">
+          <tbody><tr>
+            <th width="40%">Ind Mercado (12m)</th>
+            <th width="15%"></th>
+            <th width="15%"></th>
+            <th width="15%"></th>
+            <th width="15%"></th>
+          </tr>
+          <tr>
+            <td><label>Precio/Utlidad (x)</label></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+          </tr>
+          <tr>
+            <td><label>Precio/Valor Libro(x)</label></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+          </tr>
+          <tr>
+            <td><label>Valor de Capitalización</label></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+          </tr>
+        </tbody></table>
+
+
+        <table id="tblFinancialSummary">
+          <tbody><tr>
+            <th width="40%">Ind Financieros (12m)</th>
+            <th width="15%"></th>
+            <th width="15%"></th>
+            <th width="15%"></th>
+          </tr>
+          <tr>
+            <td><label>UPA</label></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+          </tr>
+          <tr>
+            <td><label>Valor Contable Acción</label></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+          </tr>
+          <tr>
+            <td><label>Margen Bruto %</label></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+          </tr>
+          <tr>
+            <td><label>Renta Patrimonio</label></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+          </tr>
+          <tr>
+            <td><label>Margen Neto %</label></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+          </tr>
+          <tr>
+            <td><label>Deuda Bruta/Patrimonio Neto %</label></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+          </tr>
+          <tr>
+            <td><label>Liquidez</label></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+          </tr>
+        </tbody></table>
+
+
+        <table id="tblFinancialSummary">
+          <tbody><tr>
+            <th width="40%">Balance</th>
+            <th width="15%"></th>
+            <th width="15%"></th>
+            <th width="15%"></th>
+          </tr>
+          <tr>
+            <td><label>Activo Total</label></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+          </tr>
+          <tr>
+            <td><label>Patrimonio Neto</label></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+          </tr>
+          <tr>
+            <td><label>Ventas</label></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+          </tr>
+          <tr>
+            <td><label>Margen EBIT</label></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+          </tr>
+          <tr>
+            <td><label>Ganancia ó Pérdida Neta</label></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+          </tr>
+          <tr>
+            <td><label>Depreciación y Amortización</label></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+            <td valign="middle" align="center"></td>
+          </tr>
+        </tbody></table>
+
+
+
+        <!--END: main --></div> 
+          
+
+                           </div>
+                        </div>
+                    </div>
+                </div>
+                  </div>
+    </article>
+
+</section>
